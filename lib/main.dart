@@ -101,11 +101,18 @@ class _TasksState extends State<Tasks> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4),
+                          color: Colors.black26,
+                        ),
                         width: 72,
                         height: 100,
-                        color: Colors.black26,
-                        child: Image.network(widget.foto,
-                        fit: BoxFit.cover,
+
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(4),
+                          child: Image.network(widget.foto,
+                          fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                       Column(
