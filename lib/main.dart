@@ -26,19 +26,24 @@ class MyApp extends StatelessWidget {
               padding: EdgeInsets.only(top: 8),
               child: Tasks(
                 'Estudar Flutter',
+                'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'
               ),
             ),
             Tasks(
               'Andar de Bike',
+              'https://images.pexels.com/photos/161172/cycling-bike-trail-sport-161172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
             ),
             Tasks(
               'Ler',
+              'https://thebogotapost.com/wp-content/uploads/2017/06/636052464065850579-137719760_flyer-image-1.jpg'
             ),
             Tasks(
               'Meditar',
+              'https://manhattanmentalhealthcounseling.com/wp-content/uploads/2019/06/Top-5-Scientific-Findings-on-MeditationMindfulness-881x710.jpeg'
             ),
             Tasks(
               'Jogar',
+              'https://i.ibb.co/tB29PZB/kako-epifania-2022-2-c-pia.jpg'
             )
           ],
         ),
@@ -52,7 +57,9 @@ class MyApp extends StatelessWidget {
 
 class Tasks extends StatefulWidget {
   final String nome;
-  const Tasks(this.nome,{Key? key}) : super(key: key);
+  final String foto;
+
+  const Tasks(this.nome,this.foto, {Key? key}) : super(key: key);
 
   @override
   State<Tasks> createState() => _TasksState();
@@ -88,7 +95,14 @@ class _TasksState extends State<Tasks> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Container(width: 72,height: 100,color: Colors.black26,),
+                      Container(
+                        width: 72,
+                        height: 100,
+                        color: Colors.black26,
+                        child: Image.network(widget.foto,
+                        fit: BoxFit.cover,
+                        ),
+                      ),
                       Container(
                         width: 200,
                         child: Text(
