@@ -2,7 +2,6 @@
 
 
 Curso Flutter: Widgets, Stateless, Stateful, Imagens e Animações
-Nosso primeiro projeto em Flutter
 
 ## Getting Started
 
